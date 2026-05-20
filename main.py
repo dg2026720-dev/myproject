@@ -1,3 +1,6 @@
+NaOH = compound([sphere(pos=vector(-65,60,3),radius=8),sphere(pos=vector(-65,60,3),radius=8,color=color.red)])
+KOH = compound([sphere(pos=vector(-45,60,3),radius=8),sphere(pos=vector(-45,60,3),radius=8)])
+
 box(size = vec(1,130,40) , pos = vec(80,10,0))
 box(size = vec(1,130,40) , pos = vec(-80,10,0))
 box(size = vec(160,130,1) , pos= vec(0,10,-20))
@@ -21,7 +24,8 @@ def checkbox_event(checkbox):
         elif checkbox.text == 'H2SO4':
             H2SO4.visible = True
         elif checkbox.text == 'H2CO3':
-            H2CO3.visible = True
+            H2CO3visible = True
+    
     else:
         if checkbox.text == 'NaOH':
             NaOH.visible = False
@@ -39,3 +43,12 @@ def checkbox_event(checkbox):
             H2SO4.visible = False
         elif checkbox.text == 'H2CO3':
             H2CO3.visible = False
+           
+checkbox1 = checkbox(pos=scene.title_anchor, text='NaOH', checked=True, bind=checkbox_event)
+checkbox2 = checkbox(pos=scene.title_anchor, text='KOH', checked=True, bind=checkbox_event)
+checkbox3 = checkbox(pos=scene.title_anchor, text='NA4OH', checked=True, bind=checkbox_event)
+checkbox4 = checkbox(pos=scene.title_anchor, text='Ca(OH)', checked=True, bind=checkbox_event)
+checkbox5 = checkbox(pos=scene.title_anchor, text='HCL', checked=True, bind=checkbox_event)
+checkbox6 = checkbox(pos=scene.title_anchor, text='HNO3', checked=True, bind=checkbox_event)
+checkbox7 = checkbox(pos=scene.title_anchor, text='H2SO4', checked=True, bind=checkbox_event)
+checkbox8 = checkbox(pos=scene.title_anchor, text='H2CO3', checked=True, bind=checkbox_event)
